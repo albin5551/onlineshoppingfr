@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+   <h1>LOGIN</h1>
+    <form [formGroup]="newform" (ngSubmit)="onsubmit()" >
+    
+    <label>username</label>    <input type="text" formControlName="email" name="email" placeholder="Enter username" required ><br><br>
+   <div *ngIf="newform.controls['email'].errors?.['required'] && (newform.controls['email'].touched ||newform.controls['email'].dirty)" >Required</div>
+   <!-- <div *ngIf="newform.controls['email'].dirty && newform.hasError('required','email')"> Required </div> -->
+    <!-- <div *ngIf="email.errors?.['pattern'] && (email.touched || email.dirty)" >Enter a valid username</div>  -->
+    <label>password</label>    <input type="password" formControlName="password" name="pass" placeholder="Enter password" required><br>
+    <!-- <div *ngIf="newform.controls['password'].dirty && newform.hasError('required','password')"> Required </div> -->
+
+     <div *ngIf="newform.controls['password'].errors?.['required'] && (newform.controls['password'].touched || newform.controls['password'].dirty)" >Required</div>
+    <!-- <div *ngIf="pass.errors?.['pattern'] && (pass.touched || pass.dirty)" >Enter a valid password</div> -->
+    <button type="submit">Login</button>
+    <button type="submit" (click)="add()">Add User</button>
+
+</form> 
+ 
+</body>
+</html>

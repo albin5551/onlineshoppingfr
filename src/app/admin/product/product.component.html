@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <h1>PRODUCT</h1>
+    <form [formGroup]="products"  (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="productName" name="productName" placeholder="Enter the productname">
+        <br>
+        <label for="categoryId">Select Category </label>
+               <select class="dropbtn" type="input" formControlName="categoryId"  name="select" placeholder="Select Category"  >
+               <option  *ngFor="let category of loaddata" value={{category.categoryId}}>
+                {{category.categoryName}}
+               </option>
+               </select>
+               <br>
+        <input type="text" formControlName="productDescription" name="productDescription" placeholder="Enter the productdescription">
+        <br>
+        <input type="number" formControlName="productPrice" name="productPrice" placeholder="Enter the Productprice">
+        <br>
+        <input type="number" formControlName="productStock" name="productStock" placeholder="Enter the productStock">
+        <br>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
