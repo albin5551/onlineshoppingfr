@@ -30,7 +30,8 @@ resdata:any
         if(result.userId){
           this.resdata=result;
           localStorage.setItem('token',this.resdata.accessToken.value);
-          localStorage.setItem('name',this.resdata.name)
+          localStorage.setItem('name',this.resdata.name);
+          localStorage.setItem('userid',this.resdata.userId);
           console.log(result);
 
           alert("login sucessful");
@@ -45,7 +46,7 @@ resdata:any
     }
 
     add() {
-    this.router.navigate(['/adduser'])
+    this.router.navigate(['/userreg'])
       }
 
   ngOnInit(): void {

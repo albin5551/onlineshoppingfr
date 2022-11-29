@@ -13,6 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { ProductComponent } from './admin/product/product.component';
+import { ManageUserComponent } from './admin/manage-user/manage-user.component';
+import { UserRegComponent } from './user/user-reg/user-reg.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,11 @@ import { ProductComponent } from './admin/product/product.component';
     HomeComponent,
     AdminHomeComponent,
     CategoryComponent,
-    ProductComponent
+    ProductComponent,
+    ManageUserComponent,
+    UserRegComponent,
+
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

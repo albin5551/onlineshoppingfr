@@ -18,4 +18,12 @@ export class AdminServiceService {
   loadCategory(){
     return this.http.get('http://localhost:8080/category')
   }
+
+  getUsers(){
+    return this.http.get('http://localhost:8080/users')
+  }
+  status(id:any):Observable<any>{
+  return this.http.delete('http://localhost:8080/users/'+id)
+
+  }
 }
