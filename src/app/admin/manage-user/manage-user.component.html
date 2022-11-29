@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <table class="center"></table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Status</th>
+    </tr>
+    <tr *ngFor="let user of userDetail">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.status}}</td>
+   
+    <td>
+        <!-- <button type="submit">Active</button> -->
+        <button type="submit" (click)="status(user.userId)" >Inactivate</button>
+
+    </td>
+</tr>
+</body>
+</html>

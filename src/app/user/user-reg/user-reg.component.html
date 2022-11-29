@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+    <h1>USER REGISTRATION </h1>
+
+    <form [formGroup]="userreg" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="name" name="name" placeholder="Enter the name">
+
+        <br>
+        <input type="text" formControlName="email" name="email" placeholder="Enter the email" >
+
+        <br>
+        <input type="text" formControlName="password" name="password" placeholder="Enter the password" >
+
+        <br>
+        <input type="text" formControlName="address" name="address" placeholder="Enter the address" >
+
+        <br>
+        <input type="text" formControlName="phone" name="phone" placeholder="Enter the phone" >
+
+
+        <button type="submit">Add User</button>
+
+    </form>
+    
+</body>
+</html>

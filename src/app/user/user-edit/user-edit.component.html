@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1>USER EDIT</h1>
+    
+    <form [formGroup]="useredit" (ngSubmit)="onSubmit()" >
+        Name <input type="text" formControlName="name" name="name" placeholder="Enter the name">
+        <br>
+        Email <input type="text" formControlName="email" name="email" placeholder="Enter the email">
+        <br>
+        Password <input type="text" formControlName="password" name="password" placeholder="Enter the password">
+        <br>
+        Address<input type="text" formControlName="address" name="address" placeholder="Enter the address">
+        <br>
+        Phone<input type="text" formControlName="phone" name="phone" placeholder="Enter the Phone">
+
+        <button type="submit">Update</button>
+    </form>
+    
+</body>
+</html>
