@@ -6,6 +6,7 @@ import { ManageUserComponent } from './admin/manage-user/manage-user.component';
 import { ProductComponent } from './admin/product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login/login.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserRegComponent } from './user/user-reg/user-reg.component';
 
 const routes: Routes = [
@@ -19,7 +20,9 @@ const routes: Routes = [
   {path:'product',component:ProductComponent},
   {path:'manageuser',component:ManageUserComponent},
 
-  {path:'userreg',component:UserRegComponent}
+  {path:'userreg',component:UserRegComponent},
+
+  {path:'useredit',component:UserEditComponent}
    
   
 ];

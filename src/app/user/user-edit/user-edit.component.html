@@ -7,15 +7,15 @@
     <h1>USER EDIT</h1>
     
     <form [formGroup]="useredit" (ngSubmit)="onSubmit()" >
-        Name <input type="text" formControlName="name" name="name" placeholder="Enter the name">
+        Name <input type="text" formControlName="name" name="name" placeholder="Enter the name" value [ngModel]="userdetail.name">
         <br>
-        Email <input type="text" formControlName="email" name="email" placeholder="Enter the email">
+        Email <input type="text" formControlName="email" name="email" placeholder="Enter the email" value [ngModel]="userdetail.email">
         <br>
-        Password <input type="text" formControlName="password" name="password" placeholder="Enter the password">
+        <!-- Password <input type="text" formControlName="password" name="password" placeholder="Enter the password" value [ngModel]="userdetail.password">
+        <br> -->
+        Address<input type="text" formControlName="address" name="address" placeholder="Enter the address" value [ngModel]="userdetail.address">
         <br>
-        Address<input type="text" formControlName="address" name="address" placeholder="Enter the address">
-        <br>
-        Phone<input type="text" formControlName="phone" name="phone" placeholder="Enter the Phone">
+        Phone<input type="text" formControlName="phone" name="phone" placeholder="Enter the Phone" value [ngModel]="userdetail.phone">
 
         <button type="submit">Update</button>
     </form>

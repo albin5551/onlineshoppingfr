@@ -15,4 +15,7 @@ export class UserServiceService {
   getUserId(id:any):Observable<any>{
     return this.http.get('http://localhost:8080/users/'+id);
   }
+  userEdit(id:any,data:any):Observable<any>{
+    return this.http.patch('http://localhost:8080/users/'+id,data);
+  }
 }
