@@ -16,6 +16,7 @@ import { ProductComponent } from './admin/product/product.component';
 import { ManageUserComponent } from './admin/manage-user/manage-user.component';
 import { UserRegComponent } from './user/user-reg/user-reg.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { OrderHistoryComponent } from './admin/order-history/order-history.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
     ManageUserComponent,
     UserRegComponent,
 
-    UserEditComponent
+    UserEditComponent,
+     OrderHistoryComponent
   ],
   imports: [
     BrowserModule,

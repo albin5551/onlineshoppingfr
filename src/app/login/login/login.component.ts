@@ -29,14 +29,27 @@ resdata:any
       this.authService.login(this.newform.value).subscribe(result=>{
         if(result.userId){
           this.resdata=result;
-          localStorage.setItem('token',this.resdata.accessToken.value);
-          localStorage.setItem('name',this.resdata.name);
-          localStorage.setItem('userid',this.resdata.userId);
+          // localStorage.setItem('token',this.resdata.accessToken.value);
+          // localStorage.setItem('name',this.resdata.name);
+          // localStorage.setItem('userid',this.resdata.userId);
           console.log(result);
-
-          alert("login sucessful");
           
-          this.router.navigate(['/home']);
+
+          if(result.role==2){
+            localStorage.setItem('token',this.resdata.accessToken.value);
+            localStorage.setItem('name',this.resdata.name);
+            localStorage.setItem('userid',this.resdata.userId);
+            alert("login sucessful");
+            this.router.navigate(['/home']);
+          }
+
+          else{
+            localStorage.setItem('token',this.resdata.accessToken.value);
+            localStorage.setItem('name',this.resdata.name);
+            localStorage.setItem('userid',this.resdata.userId);
+            this.router.navigate(['/admin']);
+          }
+           
         }
         else{
           alert("login not sucessful");
